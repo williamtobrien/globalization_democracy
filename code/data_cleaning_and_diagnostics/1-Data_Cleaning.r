@@ -14,18 +14,13 @@ length(unique(wdi$country))
 min(wdi$year)
 max(wdi$year)
 
-vdem <- read.csv("data/V-Dem-CY-Core-v15.csv", ,stringsAsFactors = F)
+vdem <- read.csv("data/vdem.csv", ,stringsAsFactors = F)
 # panel information for V-Dem
 length(unique(vdem$country_name))
 min(vdem$year)
 max(vdem$year)
 
 # CLEAN DATA ===========================
-vdem <- vdem %>%
-  select(country_name, country_text_id, year,
-         v2xel_frefair, v2xcl_rol, v2xeg_eqaccess,
-         v2x_polyarchy, v2x_libdem)
-
 # Filter out unmatched V-Dem years in order to ease re-coding mismatched country codes
 min_wdi_year <- min(wdi$year, na.rm = TRUE)
 
