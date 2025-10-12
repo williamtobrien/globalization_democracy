@@ -40,9 +40,7 @@ crse2 <- coeftest(m2, vcovHC(m2, type = "HC1", cluster = "group"))
 crse2
 
 # LONG-RUN EFFECT OF TRADE ON FREE FAIR ===========================
-
 # Within-country annual standard deviation of trade over time
-
 trade_shock <- temp %>%
   group_by(country) %>%
   summarise(sd_trade = sd(lag_trade)) %>%
@@ -80,7 +78,6 @@ lre <- function(coef) {
 }
 
 ## Bootstrap confidence intervals ----
-
 set.seed(891)
 coef_draws <- mvrnorm(n = 1000, mu = coefs, Sigma = vcm)
 
