@@ -7,7 +7,6 @@ library(knitr)
 library(kableExtra)
 
 # CONSTRUCT TABLE 1. VARIABLE DESCRIPTIONS ===========================
-
 var_table <- data.frame(
   Label = c("Free Fair", "Equal Law", "Equal Access",
                "FDI Inflows","FDI Outflows","Trade","Tariff Rate",
@@ -59,7 +58,6 @@ var_table <- data.frame(
     current local currency to GDP in constant local currency."
   )
 )
-
 
 table_1 <- kable(var_table,
                  format = "latex",
