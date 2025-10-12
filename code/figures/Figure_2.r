@@ -12,7 +12,6 @@ full_panel <- read.csv("data/full_panel.csv")
 
 
 # CREATE FIGURE  ===========================
-
 temp <- full_panel %>%
   filter(!is.na(polyarchy),
          !is.na(libdem),
