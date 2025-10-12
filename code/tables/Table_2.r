@@ -9,7 +9,6 @@ library(stargazer)
 full_panel <- read.csv("data/full_panel.csv")
 
 # TABLE 2. DESCRIPTIVE STATISTICS ==========================
-
 temp <- full_panel %>%
   filter(year != 1959) %>%
   select(freefair, equalaccess, equallaw,
