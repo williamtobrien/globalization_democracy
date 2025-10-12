@@ -3,12 +3,10 @@ rm(list = ls())
 
 # LIBRARIES ===========================
 library(tidyverse)
-library(lmtest)
-library(plm)
+library(ggplot2)
 
 # IMPORT DATA ===========================
 full_panel <- read.csv("data/full_panel.csv")
-
 
 # CREATE FIGURE  ===========================
 temp <- full_panel %>%
@@ -25,7 +23,6 @@ avgs <- temp %>%
   ) %>%
   pivot_longer(c(polyarchy, libdem)
   )
-
 
 # Build the plot
 figure_2 <- ggplot(avgs, aes(x = year, y = value, linetype = name)) +
@@ -66,6 +63,5 @@ figure_2 <- ggplot(avgs, aes(x = year, y = value, linetype = name)) +
 
     legend.margin = margin(t = -5)
   )
-
 
 ggsave("figures/figure_2.pdf", plot = figure_2, device = cairo_pdf)
