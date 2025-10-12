@@ -44,7 +44,6 @@ ggplot(full_panel, aes(x = inflation)) +
   geom_histogram(bins = 100)
 
 # DIAGNOSTICS
-
 test_panel <- full_panel %>%
   filter(!is.na(fdi_inflows),
          !is.na(fdi_outflows),
