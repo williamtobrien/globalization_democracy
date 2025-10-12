@@ -7,7 +7,6 @@ library(ggplot2)
 library(plm)
 
 # IMPORT DATA ===========================
-
 full_panel <- read.csv("data/full_panel.csv")
 
 # UNIVARIATE DISTRIBUTIONS ===========================
