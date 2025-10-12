@@ -27,7 +27,6 @@ temp <- temp %>%
 
 
 ## I credit Rau and Stokes (2025) for this figure idea. I use their code as a basis for mine.
-
 # Standardize variables
 temp <- temp %>%
   mutate(lag_fdi_inflows_stan = as.numeric(scale(lag_fdi_inflows)),
@@ -66,7 +65,7 @@ fig3A_df <- data.frame(var_names, coefs, ses, sig) %>%
   mutate(var_nums = c(1, 2, 3, 4)) %>%
   mutate(vf = fct_reorder(as.factor(var_names), -var_nums))
 
-
+# Plot ----
 figure_3A <- fig3A_df %>%
   ggplot(aes(x = coefs, y = vf, shape = as.factor(sig))) +
   geom_vline(xintercept = 0, color = "gray75") +
