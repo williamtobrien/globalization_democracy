@@ -130,6 +130,4 @@ figure_4 <- ggplot(df, aes(x = year, y = mean_effect)) +
   )
 
 
-ggsave("figures/figure_4.pdf", plot = figure_4, device = cairo_pdf)
-
-
+ggsave("figure_4.pdf", plot = figure_4, device = cairo_pdf)
