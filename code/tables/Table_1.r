@@ -72,4 +72,4 @@ table_1 <- kable(var_table,
                  column_spec(1, width = "3cm") %>%
                  column_spec(2, width = "12cm")
 
-cat(table_1, file = "tables/table_1.tex")
+cat(table_1, file = "table_1.tex")
