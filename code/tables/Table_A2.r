@@ -3,8 +3,9 @@ rm(list = ls())
 
 # LIBRARIES ===========================
 library(tidyverse)
-library(multiwayvcov)
+library(plm)
 library(lmtest)
+library(stargazer)
 
 # IMPORT DATA ===========================
 full_panel <- read.csv("data/full_panel.csv")
@@ -285,6 +286,6 @@ table_A2 <- stargazer(m46, m47, m48, m49, m50, m51,
                       notes.append = FALSE
 )
 
-cat(table_A2, file = "tables/table_A2.tex")
+cat(table_A2, file = "table_A2.tex")
 
 
