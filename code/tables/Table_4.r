@@ -3,7 +3,6 @@ rm(list = ls())
 
 # LIBRARIES ===========================
 library(tidyverse)
-library(multiwayvcov)
 library(lmtest)
 library(plm)
 library(stargazer)
@@ -366,4 +365,4 @@ table_4 <- stargazer(m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24,
                      notes.append = FALSE
 )
 
-cat(table_4, file = "tables/table_4.tex")
+cat(table_4, file = "table_4.tex")
