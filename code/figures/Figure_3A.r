@@ -3,6 +3,7 @@ rm(list = ls())
 
 # LIBRARIES ===========================
 library(tidyverse)
+library(ggplot2)
 library(lmtest)
 library(plm)
 
