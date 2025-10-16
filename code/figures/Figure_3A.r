@@ -89,4 +89,4 @@ figure_3A <- fig3A_df %>%
   )
 
 print(figure_3A)
-ggsave("figures/figure_3A.pdf", plot = figure_3A, device = cairo_pdf)
+ggsave("figure_3A.pdf", plot = figure_3A, device = cairo_pdf)
