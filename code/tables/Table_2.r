@@ -42,4 +42,4 @@ table_2 <- stargazer(temp,
           digits = 2
           )
 
-cat(table_2, file = "tables/table_2.tex")
+cat(table_2, file = "table_2.tex")
